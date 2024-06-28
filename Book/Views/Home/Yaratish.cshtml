@@ -1,0 +1,41 @@
+﻿@model HomeYaratishViewModel
+
+@{
+    ViewBag.Title = "Kitob qo'sish";
+}
+
+<link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="x:\books\book\wwwroot\css\foryaratish.css" rel="stylesheet" />
+
+
+<div class="container custom-form">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form enctype="multipart/form-data" asp-controller="home" asp-action="yaratish" method="post">
+                <div class="form-group mb-3">
+                    <input asp-for="Title" class="form-control" placeholder="Title" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <input asp-for="Author" class="form-control" placeholder="Author" />
+                    <span asp-validation-for="Author" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <input asp-for="PublishedYear" class="form-control" placeholder="Published year" />
+                    <span asp-validation-for="PublishedYear" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Photo" class="form-label">Choose File...</label>
+                    <input asp-for="Photo" class="form-control" placeholder="Photo" />
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary w-100">Yaratish</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

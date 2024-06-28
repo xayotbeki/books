@@ -1,0 +1,22 @@
+﻿/* custom.css fayli */
+.custom-form {
+    margin-top: 50px;
+}
+
+    .custom-form .form-group {
+        text-align: center;
+    }
+
+    .custom-form .form-control {
+        margin-bottom: 15px;
+    }
+
+    .custom-form .form-label {
+        display: block;
+        margin-top: 10px;
+        text-align: left;
+    }
+
+    .custom-form .btn {
+        margin-top: 20px;
+    }

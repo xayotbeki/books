@@ -1,3 +1,21 @@
-﻿<html>
-    <h1>salom</h1>
-</html>
+﻿
+@{
+    ViewBag.Title = "Main";
+    var xayotbek = "@xayotbek";
+}
+<link href="~/css/forindex.css" rel="stylesheet" />
+
+<nav>
+    <a asp-controller="home" asp-action="kitoblar">Kitoblar</a>
+    <a asp-controller="home" asp-action="yaratish">Kitob qo'shish</a>
+    <a asp-controller="home" asp-action="ochirish">Kitob o'chirish</a>
+    <a href="#">Kitob yangilash</a>
+
+    <main>
+        <img src="~/images/kitobmain.jpg" class="full-screen-image" />
+    </main>
+    <footer>
+        <p>&copy; 2024 Website @xayotbek</p>
+    </footer>
+</nav>
+

@@ -1,0 +1,90 @@
+﻿/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Book container styling */
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between items */
+    margin-top: 50px; /* Adjust as needed */
+}
+
+/* Book details container */
+.book-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 450px; /* Fixed height for uniformity */
+}
+
+/* Book image styling */
+.book-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .book-image img {
+        max-width: 100%;
+        max-height: 300px; /* Set a fixed max height */
+        width: auto;
+        height: auto;
+        border: 1px solid #ddd;
+        padding: 5px;
+    }
+
+/* Book info styling */
+.book-info {
+    text-align: center;
+    flex-grow: 1;
+}
+
+    .book-info h2 {
+        color: #35424a;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .book-info p {
+        color: #666;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+.published-year {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .published-year a {
+        color: blue;
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid blue;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .published-year a:hover {
+            background-color: blue;
+            color: white;
+        }

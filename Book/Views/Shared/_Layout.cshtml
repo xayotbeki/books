@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/css/forlayout.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <header>
+        <h1><a asp-controller="home" asp-action="index">KITOBLAR📚</a></h1>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
