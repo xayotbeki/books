@@ -5,16 +5,10 @@ namespace Book.Data
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<Books> Books { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            string path = "server=(localdb)\\MSSQLLocalDB;" +
-                          "database=BookDb;" +
-                          "Trusted_Connection = true;";
-
-            optionsBuilder.UseSqlServer(path);
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {            
         }
+        public DbSet<Books> Books { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

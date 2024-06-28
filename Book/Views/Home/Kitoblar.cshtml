@@ -1,0 +1,27 @@
+﻿@model HomeKitoblarViewModel
+
+@{
+    ViewBag.Title = "Kitoblar";
+}
+<link href="~/css/forkitoblar.css" rel="stylesheet" />
+
+<div class="book-container">
+    @foreach (var kitob in Model.Books)
+    {
+        var r = "~/images/" + kitob.Photo;
+
+        <div class="book-details">
+            <div class="book-image">
+                <img src="@Url.Content(r)" alt="rasm bor" asp-append-version="true" />
+            </div>
+
+            <div class="book-info">
+                <h2>Title: @kitob.Title</h2>
+                <p>Author: @kitob.Author</p>
+                <p>Published Year: @kitob.PublishedYear</p>
+            </div>
+        </div>
+    }
+</div>
+    
+    

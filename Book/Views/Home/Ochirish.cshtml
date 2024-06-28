@@ -1,0 +1,35 @@
+﻿@model HomeKitoblarViewModel
+
+@{
+    ViewBag.Title = "Kitoblar o'chirish";
+}
+<link href="~/css/forochirish.css" rel="stylesheet" />
+
+<div class="book-container">
+    @foreach (var kitob in Model.Books)
+    {
+        var r = "~/images/" + kitob.Photo;
+
+        <div class="book-details">
+            <div class="book-image">
+                <img src="@Url.Content(r)" alt="rasm bor" asp-append-version="true" />
+            </div>
+
+            <div class="book-info">
+                <h2>Title: @kitob.Title</h2>
+                <p>Author: @kitob.Author</p>
+                <p class="published-year">
+                    Published Year: @kitob.PublishedYear
+                    <form asp-controller="home" asp-action="delete" asp-route-Id="@kitob.Id" method="post">
+                        <button type="submit" onclick="return confirm("O'chirmoqchimisiz?")">o'chirish</button>
+                    </form>
+                    
+                </p>
+                
+            </div>
+        </div>
+        
+    }
+    
+</div>
+
